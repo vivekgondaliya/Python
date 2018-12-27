@@ -36,4 +36,12 @@ word_user = raw_input("Enter a word: ")
 #print(my_function(word_user))
 
 #retrive the definition 
-print(retirve_definition(word_user))
+output = retirve_definition(word_user)
+
+#if a word has more than one definitions, print them recursively
+if type(output) == list:
+    for item in output:
+        print("-", item)
+#for single definition words
+else:
+    print("-", output)

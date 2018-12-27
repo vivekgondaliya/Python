@@ -2,16 +2,10 @@ import json
 #python library for "Text Processing Services"
 import difflib
 from difflib import SequenceMatcher
+from difflib import get_close_matches
 
 #loading the json data as python dictionary
 data = json.load(open("data.json"))
-
-#run a Sequence matcher
-#first param is junk, includes spaces, blank lines, etc
-#second and third param are the words to find similarities in-between
-# Ratio is used to find how close those two words are in numerical terms
-value = SequenceMatcher(None, "rainn", "rain").ratio()
-print(value)
 
 #function for retriving definition
 def retirve_definition(word):
@@ -27,6 +21,12 @@ def retirve_definition(word):
         return data[word.title()]
     elif word.upper() in data:
         return data[word.upper()]
+    elif len(get_close_matches(word, data.keys())) > 0:
+        action = raw_input("Did you mean %s instead? [y or n]: " % get_close_matches(word, data.keys())[0])
+        if(action == "y"):
+            return data[get_close_matches(word, data.keys())[0]]
+        elif(action == "n"):
+            return ("The word does not exist yet.")
     else:
         return ("Sorry, the word doesn't exist in this dictionary.")
 

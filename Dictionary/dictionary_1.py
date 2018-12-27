@@ -1,7 +1,17 @@
 import json
+#python library for "Text Processing Services"
+import difflib
+from difflib import SequenceMatcher
 
 #loading the json data as python dictionary
 data = json.load(open("data.json"))
+
+#run a Sequence matcher
+#first param is junk, includes spaces, blank lines, etc
+#second and third param are the words to find similarities in-between
+# Ratio is used to find how close those two words are in numerical terms
+value = SequenceMatcher(None, "rainn", "rain").ratio()
+print(value)
 
 #function for retriving definition
 def retirve_definition(word):

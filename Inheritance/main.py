@@ -39,3 +39,9 @@ print("Weight: ", mammalObj.weight)
 #
 # Object Class: Mammal isInstanceOf Animal and Animal isInstanceOf Object
 # i.e. Mammal isInstanceOf Object
+#
+# CAUTION: Too much Inheritance is BAD. Increases Complexity.
+# Side note: PASS Class
+#
+# AVOID mullti-level Inheritance such as an Employee - is a Person - is a Living Being - is a Thing.
+# Stick to solving business problem in real world

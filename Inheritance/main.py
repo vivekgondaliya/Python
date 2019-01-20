@@ -1,16 +1,23 @@
-class Mammal:
+class Animal:
+    def __init__(self):
+        self.age = 1
+
     def eat(self):
         print("eat")
-    
+
+#Mammal IS an Animal
+class Mammal(Animal):
     def walk(self):
         print("walk")
 
-class Fish:
-    def eat(self):
-        print("eat")
-    
+#Fish IS an Animal
+class Fish(Animal):
     def swim(self):
         print("swim")
+
+mammalObj = Mammal()
+mammalObj.eat()
+print("Age: ", mammalObj.age)
 
 #Probelm: We have defined eat() TWICE
 #Instills: DRY

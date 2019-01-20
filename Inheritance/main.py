@@ -45,3 +45,7 @@ print("Weight: ", mammalObj.weight)
 #
 # AVOID mullti-level Inheritance such as an Employee - is a Person - is a Living Being - is a Thing.
 # Stick to solving business problem in real world
+
+# CAUTION: Multiple Inheritance - class Manager(Employee, Person) has a different behavior
+#                           than class Manager(Person, Employee)
+#  This can be done by other DEVs on the team

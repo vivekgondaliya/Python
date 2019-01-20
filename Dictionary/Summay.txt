@@ -1,0 +1,5 @@
+Topics Covered
+- JSON data
+- basic functionalities: input, function def, if and for statement, lower(), upper(), title()
+- library: difflib
+

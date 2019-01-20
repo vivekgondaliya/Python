@@ -25,4 +25,7 @@ print("Age: ", mammalObj.age)
 #Why? if you want to modify, you will have to modify all methods
 
 #Inheritance: mechanism that defines common behavior or funtions in one class
-#             Inherit them in other classses  
+#             Inherit them in other classses 
+# 
+# Object Class: Mammal isInstanceOf Animal and Animal isInstanceOf Object
+# i.e. Mammal isInstanceOf Object
